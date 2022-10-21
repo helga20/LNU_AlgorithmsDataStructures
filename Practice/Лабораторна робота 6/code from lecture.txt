@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+
+class Element
+{​​​​​​​
+  public:
+    size_t row_number;
+    size_t column_number;
+    int value;
+    Element* up;
+    Element* left;
+    Element()
+    {​​​​​​​
+        row_number = 0;
+        column_number = 0;
+        up = left = nullptr;
+    }​​​​​​​
+}​​​​​​​;
+
+class SparseMatrix
+{​​​​​​​
+        static const size_t _rows_quantity = 20;
+        static const size_t _columns_quantity = 20;
+        Element rows[_rows_quantity + 1];
+        Element cols[_columns_quantity + 1];
+    public:
+        SparseMatrix()
+        {​​​​​​​
+            for(size_t i = 0; i <= _rows_quantity; i++)
+            {​​​​​​​
+                rows[i].left = &rows[i];
+            }​​​​​​​
+            
+            for(size_t j = 0; j <= _columns_quantity; j++)
+            {​​​​​​​
+                cols[j].up = &cols[j];
+            }​​​​​​​
+        }​​​​​​​
+        
+        Element* get_previous_by_row(size_t row_number, size_t column_number)
+        {​​​​​​​
+            Element* current = &rows[row_number];
+            while(current->left->column_number > column_number)
+            {​​​​​​​
+                current = current->left;
+            }​​​​​​​
+            return current;
+        }​​​​​​​;
+        
+        Element* get_previous_by_column(size_t row_number, size_t column_number)
+        {​​​​​​​
+            Element* current = &cols[column_number];
+            while(current->up->row_number > row_number)
+            {​​​​​​​
+                current = current->up;
+            }​​​​​​​
+            return current;
+        }​​​​​​​;
+        
+        
+        void remove_element(size_t row_number, size_t column_number)
+        {​​​​​​​
+            Element* prev_by_row = get_previous_by_row(row_number, column_number);
+            Element* prev_by_col = get_previous_by_column(row_number, column_number);
+            
+            Element* current = prev_by_row->left;
+            //checking if element is already in matrix
+            if(current->column_number == column_number)
+            {​​​​​​​
+                prev_by_row->left = current->left;
+                prev_by_col->up = current->up;
+                delete current;
+            }​​​​​​​
+        }​​​​​​​
+         
+        
+        void add_element(size_t row_number, size_t column_number, int value)
+        {​​​​​​​
+            Element* prev_by_row = get_previous_by_row(row_number, column_number);
+            Element* prev_by_col = get_previous_by_column(row_number, column_number);
+            Element* new_element = new Element();
+            new_element->row_number = row_number;
+            new_element->column_number = column_number;
+            new_element->value = value;
+            
+            new_element->left = prev_by_row->left;
+            prev_by_row->left = new_element;
+            
+            new_element->up = prev_by_col->up;
+            prev_by_col->up = new_element;
+        }​​​​​​​
+        
+        int get_element(size_t row_number, size_t column_number)
+        {​​​​​​​
+            Element* prev_by_row = get_previous_by_row(row_number, column_number);
+            Element* current = prev_by_row->left;
+            int return_value = 0;
+            if(current->column_number == column_number)
+            {​​​​​​​
+                return_value = current->value;
+            }​​​​​​​
+            return return_value;
+        }​​​​​​​
+    
+}​​​​​​​;
+
+int main()
+{​​​​​​​
+    cout<<"Hello World "<<endl;
+    SparseMatrix matr;
+    cout<<"(1, 1) expected: 0 actual: ";
+    cout<<matr.get_element(1, 1)<<endl;
+    cout<<"(3, 4) expected: 0 actual: ";
+    cout<<matr.get_element(3, 4)<<endl;
+    
+    matr.add_element(1, 1, 11);
+    matr.add_element(3, 4, 34);
+    cout<<"(1, 1) expected: 11 actual: ";
+    cout<<matr.get_element(1, 1)<<endl;
+    cout<<"(3, 4) expected: 34 actual: ";
+    cout<<matr.get_element(3, 4)<<endl;
+    
+    matr.remove_element(3, 4);
+    
+    cout<<"(3, 4) expected: 0 actual: ";
+    cout<<matr.get_element(3, 4)<<endl;
+
+    return 0;
+}​​​​​​​
+ 
