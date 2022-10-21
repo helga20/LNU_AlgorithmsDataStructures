@@ -1,0 +1,5 @@
+﻿  stack_list_functions.cpp
+D:\Навчання\1 курс 2 семестр\lab2_stackList\lab2_stackList\stack_list_functions.cpp(42,11): warning C4101: 'elem': unreferenced local variable
+  stack_list_main.cpp
+  Generating Code...
+  lab2_stackList.vcxproj -> D:\Навчання\1 курс 2 семестр\lab2_stackList\Debug\lab2_stackList.exe
