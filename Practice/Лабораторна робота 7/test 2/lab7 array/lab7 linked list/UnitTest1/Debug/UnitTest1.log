@@ -1,0 +1,4 @@
+﻿  UnitTest1.cpp
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Тестування\test 2\lab7 linked list\UnitTest1\UnitTest1.cpp(188,21): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Тестування\test 2\lab7 linked list\UnitTest1\UnitTest1.cpp(188,21): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+  UnitTest1.vcxproj -> D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Тестування\test 2\lab7 linked list\Debug\UnitTest1.dll
