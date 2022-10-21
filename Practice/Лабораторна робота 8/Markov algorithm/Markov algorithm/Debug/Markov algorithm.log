@@ -1,0 +1,8 @@
+﻿  main.cpp
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 8\Markov algorithm\Markov algorithm\main.cpp(19,11): warning C4018: '<': signed/unsigned mismatch
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 8\Markov algorithm\Markov algorithm\main.cpp(114): message : see reference to function template instantiation 'void MarkovAldorithm<String>(Value &,std::vector<String_values<Value>,std::allocator<String_values<Value>>> &)' being compiled
+          with
+          [
+              Value=String
+          ]
+  Markov algorithm.vcxproj -> D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 8\Markov algorithm\Debug\Markov algorithm.exe
