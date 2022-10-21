@@ -1,0 +1,7 @@
+﻿  lab1.cpp
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 1\Lab 1 – копія\Project1\lab1.cpp(44,17): warning C4101: 'k': unreferenced local variable
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 1\Lab 1 – копія\Project1\lab1.cpp(44,6): warning C4101: 'i': unreferenced local variable
+  main_lab1.cpp
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 1\Lab 1 – копія\Project1\main_lab1.cpp(8,9): warning C4101: 'i': unreferenced local variable
+  Generating Code...
+  Project1.vcxproj -> D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Лабораторна робота 1\Lab 1 – копія\Debug\Project1.exe
