@@ -1,0 +1,7 @@
+﻿  table.cpp
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\laba3\table.cpp(59,11): warning C4018: '<': signed/unsigned mismatch
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\laba3\table.cpp(135,11): warning C4305: 'return': truncation from 'int' to 'bool'
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\laba3\table.cpp(148): warning C4715: 'Table::getValue': not all control paths return a value
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\laba3\table.cpp(192): warning C4715: 'Table::getKeys': not all control paths return a value
+D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\laba3\table.cpp(205): warning C4715: 'Table::getValues': not all control paths return a value
+  laba3.vcxproj -> D:\STOP! Небезпечно для життя\А я попереджала\Алгоритми і структури даних (практичні)\Практична 3\laba3\Debug\laba3.exe
